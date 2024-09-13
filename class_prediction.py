@@ -1,10 +1,11 @@
+import numpy as np
 from sklearn.naive_bayes import GaussianNB
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 # Example dataset
 # Features: [Income Level, Credit Score, Age]
-data = [
+data = np.array ([
     [45000, 600, 25],  # Person 1
     [54000, 650, 32],  # Person 2
     [38000, 500, 22],  # Person 3
@@ -15,10 +16,10 @@ data = [
     [32000, 420, 29],  # Person 8
     [67000, 720, 39],  # Person 9
     [29000, 390, 21],  # Person 10
-]
+])
 
 # Labels: 1 means paid on time, 0 means did not pay on time
-labels = [1, 1, 0, 1, 0, 1, 1, 0, 1, 0]
+labels =np.array([1, 1, 0, 1, 0, 1, 1, 0, 1, 0]) 
 
 # Prepare data (X for features, y for labels)
 X = data  # Features: Income level, Credit score, Age
